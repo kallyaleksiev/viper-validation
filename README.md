@@ -18,11 +18,16 @@ This is just for fun to quickly explore the LLM's knowledge space. It's obviousl
 
 It's recommended to use [`poetry`](https://python-poetry.org/docs/)
 
+You must also add your `ANTHROPIC_API_KEY` as env variable. 
+
 When you have poetry just:
 
 ```
 poetry install 
 poetry shell 
+
+# optionally: export ANTHROPIC_API_KEY=...
+
 vipv -f example-schema.yaml \
     -o /Users/kally/validation-runs/ \
     --max-concurrent-validation 2 \
