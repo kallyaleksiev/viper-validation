@@ -1,0 +1,54 @@
+idea: "Chatbot for customer service"
+metadata:
+  version: "def-acc-week-minus-1"
+  hunches:
+    - oneLiner: "Customer service chatbots struggle with complex, multi-step queries"
+
+experiments:
+  - persona:
+      title: "Customer Service Manager"
+      jobDescription: |
+        They are overseeing the implementation of a new AI-powered chatbot for customer service, aiming to improve response times and customer satisfaction.
+      specificExpertise: "They have extensive experience in identifying the most valuable use-cases for chatbots in customer service"
+    interview:
+      metadata:
+        annotations:
+          "focus": "technical"
+          "personaSeniority": "senior"
+      spec:
+        biggestIntendedLearning: "How chatbots are being used effectively in customer service"
+        questions:
+          - "Are you managing large-scale chatbot deployments?"
+          - "How are you handling complex, multi-step customer queries with your chatbot?"
+    llmSpec:
+      model: "claude-3-5-sonnet-20240620"
+      decodingParameters:
+        temperature: 0.6
+    numRepeats: 2
+    maxNumSteps: 5
+
+  - persona:
+      title: "CTO"
+      jobDescription: |
+        They are the CTO of a tech company that is developing an advanced AI chatbot platform for customer service.
+      specificExpertise: |
+        They have been in the customer service technology sector for 20 years and have witnessed the evolution of various 
+        open and proprietary technologies in the space
+    interview:
+      metadata:
+        annotations:
+          "focus": "technical"
+          "personaSeniority": "executive"
+      spec:
+        biggestIntendedLearning: "What does their chatbot implementation process look like?"
+        questions:
+          - "Are you deploying chatbots for large enterprises?"
+          - "How are you handling natural language understanding in your chatbots?"
+    llmSpec:
+      model: "claude-3-5-sonnet-20240620"
+      decodingParameters:
+        temperature: 0.6
+    numRepeats: 2
+    maxNumSteps: 5
+
+outputDir: "/Users/kally/src/pre-viper-validation/validation_runs"
